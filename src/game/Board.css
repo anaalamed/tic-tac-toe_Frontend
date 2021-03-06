@@ -1,0 +1,43 @@
+
+
+.Board {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid darkslateblue;   
+    width: 50%;
+}
+
+.line {
+    display: flex;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+    border: 1px solid darkslateblue;
+    flex: 1;
+    font-weight: bold;
+    color: white;
+    font-size: 50px;
+}
+
+.cell:hover{
+   background-color: darkslateblue;
+   /* font-size: 70px; */
+   animation: GreaterFont infinite 5s linear;
+}
+
+
+  /* @keyframes GreaterFont {
+    from {
+      font-size: 50px;
+    }
+    to {
+      font-size: 70px;
+      background-color: darkslategray;
+    }
+  } */
