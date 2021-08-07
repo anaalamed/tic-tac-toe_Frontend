@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import Start from './Start';
+import Start from './start/Start';
 import Game from "./game/Game"
 
 
@@ -12,9 +12,11 @@ function App() {
 
   function startGame({ name, code }) {
     // api request to start game
+    // api/start. POST - add
 
     console.log(name, code);
     setGame({
+      identifier: 'anaalamed', // add in headers
       me: {
         name: name || 'Ana',
         wins: 5
@@ -34,14 +36,14 @@ function App() {
   }
 
   function sendPlayerMove(position) {
-    // send move to api
     // check if valid 
-    // return obj
-      console.log(position);
+    // api/game/move. PUT - update. or post - add new move
+    
   }
 
   function updateGameState() {
     // request ti check the game state
+    // api/game/status. GET
   }
 
 

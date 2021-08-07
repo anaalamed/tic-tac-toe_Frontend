@@ -4,7 +4,8 @@ function GetCode({ onGive }) {
   const [code, setCode] = useState('');
 
   useEffect(() => {
-    // get the code from server
+    // request to get code
+    // POST/ /api/game/code. when have code the game started
     const givenCode = Date.now().toString().substring(5);
     console.log(givenCode);
     setCode(givenCode);

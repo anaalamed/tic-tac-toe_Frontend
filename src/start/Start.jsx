@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './App.css'
+import '../App.css'
 import EnterName from "./EnterName";
 import GetCode from "./GetCode";
 import EnterCode from "./EnterCode";
@@ -10,30 +10,17 @@ function Start({ onStart }) {
   const [codeState, setCodeState] = useState(''); // get/enter
   const [code, setCode] = useState(0);
 
-  const [game, setGame] = useState(null);
-
-  function startGame() {
+  async function startGame() {
     // api request to start game
     console.log(name, code);
 
+    // const response = await fetch("http://localhost/3000/api/game/start", {
+    //   body: JSON.stringify({ name, code }) // send to the server
+    // })
+    // game = response.json();
+
+    // onStart({ name, code, game });
     onStart({ name, code });
-    setGame({
-      me: {
-        name: name,
-        wins: 5
-      },
-      opponent: {
-        name: 'moshe',
-        wins: 2
-      },
-      isMyTurn: false,
-      mySign: 'x',
-      board: [
-        ['x', '', 'x'],
-        ['o', 'o', 'x'],
-        ['x', '', 'o']
-      ]
-    });
   }
 
 
